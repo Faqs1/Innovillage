@@ -1,0 +1,38 @@
+[
+    {
+        "id":1,
+        "name":"Sapi Kudus",
+        "umur": "2 tahun",
+        "berat": "3 ton",
+        "image":"img_produk/sapi_hitamputih.jpg",
+        "price":30000000,
+        "desc":"sapi sehat kuat,susu melimpah ruah"
+    },
+    {
+        "id":2,
+        "name":"Sapi Kudus",
+        "umur": "2 tahun",
+        "berat": "3 ton",
+        "image":"img_produk/sapi_ku.jpg",
+        "price":30000000,
+        "desc":"sapi sehat kuat,susu melimpah ruah"
+    },
+    {
+        "id":3,
+        "name":"Sapi Kudus",
+        "umur": "2 tahun",
+        "berat": "3 ton",
+        "image":"img_produk/sapi_lembu.jpg",
+        "price":30000000,
+        "desc":"sapi sehat kuat,susu melimpah ruah"
+    },
+    {
+        "id":4,
+        "name":"Sapi Kudus",
+        "umur": "2 tahun",
+        "berat": "3 ton",
+        "image":"img_produk/sapi-bulu.jpg",
+        "price":30000000,
+        "desc":"sapi sehat kuat,susu melimpah ruah"
+    }
+]

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="produk.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="title">Detail Produk</div>
+        <div class="detail">
+            <div class="image">
+                <img src="">
+            </div>
+            <div class="content">
+                <h1 class="name"></h1>
+                        <div class="price"></div> 
+                        <div class="age"></div>
+                        <div class="weight"></div>
+                        <div class="buttons">
+
+                            <button> Check Out</button>
+                            <button>Tambah Keranjang
+                                <span>
+                                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.3L19 7H7.3"/>
+                                      </svg>
+                                </span>
+
+                            </button>                
+                        </div>
+                        <h4>Deskripsi :</h4>
+                        <div class="description"></div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let product=null;
+        fetch('produk.json')
+        .then(response=>response.json())
+        .then(data=>{
+            product=data;
+        showDetail();
+    })
+    function showDetail(){
+        let detail=document.querySelector('.detail');
+        let productId =new URLSearchParams(window.location.search).get('id');
+        let thisProduct = product.filter(value=> {
+            return value.id == productId})    
+    [0];
+
+    if(!thisProduct){
+        window.location.href="/";
+    }
+    detail.querySelector('.image img').src= thisProduct.image;
+    detail.querySelector('.name').innerText = thisProduct.name;
+    detail.querySelector('.price').innerText=("Rp. ")+thisProduct.price;
+    detail.querySelector(".age").innerText = ("Umur :")+thisProduct.umur;
+    detail.querySelector(".weight").innerText = ("Berat :")+thisProduct.berat;
+    detail.querySelector(".description").innerText=thisProduct.desc;
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="produk.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="navigator">
+        <img src="images/Tasli_Milk.png">
+
+        <input type="checkbox" id="check">
+        <label for="" class="ikon">
+            <i id="menu-ikon" class="fa-solid fa-bars"></i>
+            <i  id="close-ikon" class="fa-solid fa-x"></i>
+        </label>
+        <nav class="list"> 
+                <a href="home.html"> Home</a>
+                <a href="">Produk</a>
+                <a href="about.html"> Tentang</a>
+                <a href=""> Hubungi</a> 
+        </nav>
+    </header>
+    <div class="container">
+        <div class="title">LIST PRODUK </div>
+        <div class="ListProduk"></div>
+    </div>
+    <div class="card">
+        <div class="title">Daftar Produk</div>
+        <div class="card-image-container">
+            <img src="" alt="">
+        </div>
+        <p class="card-title">Card Title</p>
+        <p class="card-des">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi consectetur velit voluptatum.
+        </p>
+        <div class="card-btn">
+            <span class="card-btn-text">Detail</span>
+        </div>
+    </div>
+    <script>
+        let products=null;
+        fetch('produk.json')
+        .then(response=>response.json())
+        .then(data=>{
+            products=data;
+            console.log(products);
+            addDatatoHTML();
+        })
+        let ListProduk=document.querySelector('.ListProduk');
+        function addDatatoHTML(){
+            products.forEach(produk=>{
+                let newProdukBarang=document.createElement('a');
+                newProdukBarang.href='/detail.html?id='+produk.id;
+                newProdukBarang.classList.add('item');
+                newProdukBarang.innerHTML=`
+                <img src="${produk.image}">
+                <h2> ${produk.name}</h2>
+                <div class="price>${produk.price}</div>`;
+
+                ListProduk.appendChild(newProdukBarang);
+            })
+        }
+    </script>
+</body>
+</html>

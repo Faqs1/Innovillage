@@ -1,0 +1,302 @@
+header{
+  height: 100vh;
+  background-color: white;
+  background-image: url('images/peternakan_sade2.jpg');
+  background-size: cover;
+  background-position: center;
+}
+.milk{
+  width: 60p0x;
+}
+#hero{
+  color: #ffff;
+}
+#hero h1{
+  font-weight: bold;
+  font-size: 50px;
+}
+#hero p{
+  font-size: 30px;
+}
+.navigator{
+ max-width: 1200px;
+ margin: 0 auto;
+  font-size: 30px;
+  font-family: Garamond;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+}
+.navigator ul{
+  display: flex;
+  gap: 2rem;
+}
+.navigator ul li{
+  list-style-type:none;
+}
+.navigator ul a{
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+}
+.navigator a:hover{
+  color: orange;
+}
+.container{
+  align-items: center;
+  justify-content:center;
+  gap: 30px;
+  display: flex;
+
+  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #fff;
+  border-radius: 15px;
+
+  
+}
+.about{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  color: black;
+  font-size: 40px;
+  
+}
+.container{
+  width: 1000px;
+  height: 500px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin-left: 290px;
+  
+}
+.container img{
+  width: 328px;
+  height: 289px;
+  border-radius: 15px 15px 15px 15px; 
+  padding-left: 20px;
+  padding-top: 15px;
+}
+.container p {
+  text-align: justify;
+  padding-right: 15px;
+
+}
+/* PRODUK */
+.produk-title{
+  text-align: center;
+  font-size: 40px;
+  top: 30px;
+}
+.produk{
+  justify-content: space-evenly;
+  align-items: center;
+  display: flex;
+  text-align: center ;
+}
+.circle p{
+  font-family: cambria;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+/* #KENGGULUAN */
+.container2{
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  justify-content: center;
+}
+.container2 .first{
+  background-color:green ;
+}
+.container2 .second{
+  background-color: steelblue;
+}
+.container2 .third{
+  background-color: darkorange;
+}
+.container2 .card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align:center;
+  height: 400px;
+  width: 350px;
+  border-radius: 15px;
+  color: black;
+  cursor: pointer;
+  transition: 400ms;
+ 
+}
+.keunggulan{
+  font-family:Cambria;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  display:flex;
+  font-size: 40px;
+}
+.container2 .card h4{
+  font-size: 20px;
+  font-family:Helvetica;
+} 
+.container2 .card p{
+  font-family: Helvetica;
+  padding-left: 7px;
+  padding-right: 10px;
+}
+.container2 .card img{
+  width: 80%;
+  border-radius: 10px;
+  
+}
+.container2 .card:hover{
+  transform: scale(1.2,1.2);
+}
+.container2:hover>.card:not(:hover){
+  filter: blur(10px);
+  transform: scale(0.9,0.9);
+}
+/* == KERJA SAMA == */
+.kerja-sama{
+  margin-top: 70px;
+}
+.kerja-sama h3{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 40px;
+}
+.logo img{
+  height: 40px;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  list-style-type: none;
+  
+}
+.logo-atas{
+  
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  position:relative;
+}
+.logo-atas img{
+  width: 200px;
+  height: 40%;
+}
+.logo-atas .konsul-it{
+  height: 50%;
+  margin-top:45px ;
+}
+.logo .logo-atas .TelU{
+  height: 50%;
+  background-position-y: -100px;
+  
+}
+.logo-atas .telkom{
+  height: 50%;
+  margin-left: 35px;
+}
+.logo .logo-atas .innovillage img{
+  height: 80px;
+  width: 170px;
+  margin-top: 46px;
+}
+
+.logo-bawah{
+  display: flex;
+  position: relative; 
+  justify-content: center;
+  padding-top: 40px;
+  gap: 50px;
+  
+}
+.logo-bawah .kampus-merdeka img{
+  width: 140px;
+  height: 70px;
+  padding-right: -10px;
+  bottom: 20px;
+}
+.bumn{
+  width: 70px;
+}
+
+/* FOOTER */
+section{
+  padding: 80px 13% 70px;
+}
+.footer{
+  background-color:#0F1035 ;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,auto));
+  gap: 3.5rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  
+}
+.footer-content-title p{
+  font-size: 25px;
+}
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1170px;
+  margin: auto;
+  
+}
+.footer-content .social-links{
+padding-left: 10px;
+
+}
+.footer-content{
+  width: 25%;
+  padding: 0 15px;
+  
+}
+.footer-content .social-links a{
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color:rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color:wheat ;
+  transition: all 0.4s ease;
+
+}
+.footer-content .social-links a:hover{
+  color: black;
+  background-color: #fff;
+}
+.footer-content h2{
+  font-size: 25px;
+  color: #fff;
+  text-transform: capitalize;
+  margin-bottom: 40px;
+  font-weight: bold;
+  position: relative;
+}
+.footer-content h2::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-content iframe{
+  height: 300px;
+  width: 400px;
+}
+.cp{
+  color: black;
+}
